@@ -41,7 +41,7 @@ We are planning to do this in `2 steps`.
 
 # Description of Games
 
-Description of each game can be found [here](https://github.com/PlaThyme/PlaThyme/tree/main/client/README.md)
+Description of each game can be found [here](https://github.com/PlaThyme/PlaThyme/tree/main/gamedescriptions.md)
 
 # How to set up your environment and run tests
 

@@ -9,6 +9,7 @@ import WaitRoom from './components/WaitRoom';
 import logo from './images/plathyme.png';
 
 import DrawTheWord from './Games/DrawTheWord/DrawTheWord';
+import Slapjack from './Games/Slapjack';
 import TestGame from './Games/TestGame/TestGame';
 
 import './App.css';
@@ -28,6 +29,7 @@ export default function App() {
     { gameId: 2, gameName: "TestGame", minPlayers: 3 },
     { gameId: 3, gameName: "Enigma Breaker", minPlayers: 4 },
     { gameId: 4, gameName: "Card game", minPlayers: 2 },
+    { gameId: 5, gameName: "Slapjack", minPlayers: 2 }
   ]);
 
   // Game and player Info
@@ -123,6 +125,8 @@ export default function App() {
         return <TestGame socket={socket}/>;
       case 3:
         break;
+      case 4:
+        return <Slapjack socket={socket}/>;    
       default:
         break;
     }
