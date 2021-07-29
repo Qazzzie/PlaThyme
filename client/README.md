@@ -30,7 +30,7 @@ will be a game where one player will use a virtual canvas to draw a secret word 
 * Writing documentation on game creation process.
 
 ## __Slapjack__
-Players place down their cards until a Jack is played. The first player to click "SLAP!" first wins all the cards on the table. The goal is to collect all the cards. Clicking "SLAP!" at the wrong time forfiets the entire set of cards to the person who last played their turn. If a card is placed before someone "SLAP!"'s then the cards on the table stay and the players must continue placing cards.
+Players place down their cards until a Jack is played. The first player to click "SLAP!" first wins all the cards on the table. The goal is to collect all the cards. Clicking "SLAP!" at the wrong time forfiets a card to the person who last played their turn. If a card is placed before someone "SLAP!"'s then the cards on the table stay and the players must continue placing cards.
 
 
 ## __Future game ideas__

@@ -1,4 +1,5 @@
 const Game = require("./Game");
+// const words = require('./words.json')
 /**
  * This is a backend implementation for `DrawTheWord` game. It contains all the Game logic.
  * This class uses the `Game.js` class to implement certain game features.
@@ -24,7 +25,7 @@ class DrawTheWord extends Game {
 
   /**
    * Handle the data received from clients through `events`. 
-   * This function deals with what to do with the data received form clients.
+   * This function deals with what to do with the data received from clients.
    * */
   recieveData(data) {
     if (data.event === "canvas-data") {

@@ -9,7 +9,7 @@ import WaitRoom from './components/WaitRoom';
 import logo from './images/plathyme.png';
 
 import DrawTheWord from './Games/DrawTheWord/DrawTheWord';
-import Slapjack from './Games/Slapjack';
+import Slapjack from './Games/Slapjack/Slapjack';
 import TestGame from './Games/TestGame/TestGame';
 
 import './App.css';
@@ -45,18 +45,18 @@ export default function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const openModal = () =>  setIsOpen(true);
+    const openModal = () => setIsOpen(true);
 
     // Socket Connection
     socket = io(SERVER);
-    socket.on("connection", () => {});
+    socket.on("connection", () => { });
 
     // Socket events
     socket.on("gameData", (gameData) => {
       const name = listofGames.find(
         (id) => id.gameId === gameData.gameId
       ).gameName;
-      setGameInfo({ gameName: name, minPlayers: gameData.minPlayers, roomCode: gameData.code, gameId:gameData.gameId});
+      setGameInfo({ gameName: name, minPlayers: gameData.minPlayers, roomCode: gameData.code, gameId: gameData.gameId });
       setInGame(true);
     });
 
@@ -77,7 +77,7 @@ export default function App() {
     });
 
     // Component DidUnmount, clear setup.
-    return () => {  
+    return () => {
       socket.emit("disconnect");
       socket.off();
     }
@@ -85,48 +85,49 @@ export default function App() {
 
   // broadcast message to all players
   useEffect(() => {
-      socket.on("update-game", (data) => {
-        if(data.event === "start-game"){
-          setStartGame(true);
-        }
-      })
+    socket.on("update-game", (data) => {
+      if (data.event === "start-game") {
+        setStartGame(true);
+      }
+    })
   }, []);
 
+  // @modal dialog popup 
   const closeModal = () => setIsOpen(false);
 
   const handleCreateGame = (playerName, selectedGame) => {
-    let truncName = playerName.slice(0,14);
+    let truncName = playerName.slice(0, 14);
     setCurrentPlayer(truncName);
     const id = selectedGame.gameId;
-    socket.emit("newRoom", { 
-      name: truncName, 
-      gameId: id, 
-      minPlayers:  selectedGame.minPlayers
+    socket.emit("newRoom", {
+      name: truncName,
+      gameId: id,
+      minPlayers: selectedGame.minPlayers
     });
   }
 
   const handleJoinGame = (playerName, roomCode) => {
-    let truncName = playerName.slice(0,14);
+    let truncName = playerName.slice(0, 14);
     setCurrentPlayer(truncName);
-    socket.emit("joinGame", { 
-      name: truncName, 
-      roomCode: roomCode 
+    socket.emit("joinGame", {
+      name: truncName,
+      roomCode: roomCode
     });
   }
 
   const renderGame = (gameId) => {
-    switch(gameId){
+    switch (gameId) {
       case 1:
-        if(startGame === true){
-          return <DrawTheWord socket={socket}/>;
+        if (startGame === true) {
+          return <DrawTheWord socket={socket} />;
         }
-        return <WaitRoom/>;
+        return <WaitRoom />;
       case 2:
-        return <TestGame socket={socket}/>;
+        return <TestGame socket={socket} />;
       case 3:
         break;
       case 4:
-        return <Slapjack socket={socket}/>;    
+        return <Slapjack socket={socket} />;
       default:
         break;
     }
@@ -145,27 +146,27 @@ export default function App() {
             leaveGame={setInGame}
             socket={socket}
           >
-            { 
+            {
               renderGame(gameInfo.gameId)
             }
           </GameRoom>
         </>
-      ) 
-      : 
-      // Landing page for user to select Game from dropdown 
-      (
-        <div className="App font-mono bg-thyme-darkest h-screen">
-          <img src={logo} alt="PlaThyme" className="w-80 block m-auto"></img>
-          <SelectGame
-            listofGames={listofGames}
-            createGame={handleCreateGame}
-            joinGame={handleJoinGame}
-          />
-          <Carousel />
-        </div>
-      )}
+      )
+        :
+        // Landing page for user to select Game from dropdown 
+        (
+          <div className="App font-mono bg-thyme-darkest h-screen">
+            <img src={logo} alt="PlaThyme" className="w-80 block m-auto"></img>
+            <SelectGame
+              listofGames={listofGames}
+              createGame={handleCreateGame}
+              joinGame={handleJoinGame}
+            />
+            <Carousel />
+          </div>
+        )}
 
-      {/** modal Dialog, will be displayed when any error occured */}
+      {/** @modal Dialog, will be displayed when any error occured */}
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
@@ -200,6 +201,7 @@ export default function App() {
                 >
                   {title}
                 </Dialog.Title>
+                
                 <div className="mt-2">
                   <p className="text-md text-thyme-100">{dialogText}</p>
                 </div>
