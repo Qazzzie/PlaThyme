@@ -42,7 +42,7 @@ export default function Slapjacktable({ socket }) {
 
     return(
         <div className="grid-container mt-10">
-            text
+            Slapjack
         </div>
     )
 }
