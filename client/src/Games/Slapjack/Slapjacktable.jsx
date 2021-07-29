@@ -11,8 +11,8 @@ import { Dialog, Transition } from "@headlessui/react";
 import ToolTip from "../../components/ToolTip";
 // import "./Wartable.css";
 /**
- * @param {any} socket -- this is the socket object using which client connected to server.
- * @returns This function will return ___ for the War Game.
+ * @param {any} socket -- this is the socket object 
+ * @returns This function will return ___ 
  */
 //Slapjack
 
@@ -25,7 +25,7 @@ export default function Slapjacktable({ socket }) {
     const [Jack, setJack] = useState(false);
 
 
-    // const cardsRed=useRef(null);
+    // const cardsRef=useRef(null);
 
     // //card entering from side of screen animation 
     // useEffect(()=> {

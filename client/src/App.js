@@ -32,6 +32,25 @@ export default function App() {
     { gameId: 5, gameName: "Slapjack", minPlayers: 2 }
   ]);
 
+  const renderGame = (gameId) => {
+    switch (gameId) {
+      case 1:
+        if (startGame === true) {
+          return <DrawTheWord socket={socket} />;
+        }
+        return <WaitRoom />;
+      case 2:
+        return <TestGame socket={socket} />;
+      case 3:
+        break;
+      case 5:
+        return <Slapjack socket={socket} />;
+      default:
+        break;
+    }
+    return <></>;
+  }
+
   // Game and player Info
   const [currentPlayer, setCurrentPlayer] = useState("none");
   const [gameInfo, setGameInfo] = useState({
@@ -115,24 +134,7 @@ export default function App() {
     });
   }
 
-  const renderGame = (gameId) => {
-    switch (gameId) {
-      case 1:
-        if (startGame === true) {
-          return <DrawTheWord socket={socket} />;
-        }
-        return <WaitRoom />;
-      case 2:
-        return <TestGame socket={socket} />;
-      case 3:
-        break;
-      case 4:
-        return <Slapjack socket={socket} />;
-      default:
-        break;
-    }
-    return <></>;
-  }
+
 
   return (
     <div className="App font-mono bg-thyme-darkest">

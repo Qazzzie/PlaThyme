@@ -60,7 +60,7 @@ __Detailed discription of `Game.js` methods is provided [here](https://github.co
 
 #  Issues and Pull Requests
 # How to file a bug report?
-
+Currently there exists this discord for new members interested in PlaThyme. Find it here! https://discord.gg/4bAcxfAP86 Or email 
 # How to suggest a new feature?
 
 # Code of Conduct

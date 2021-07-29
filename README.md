@@ -4,7 +4,7 @@
 * Michael Fulton
 
 # PlaThyme
-It is a multiplayer web game hosting site. We are aiming to create a website where users can select a game, create a private room and start playing games. The site shall be able to host open source games created by other contributors. 
+It is a multiplayer web game hosting site. We are aiming to create a website where users can select a game, create a private room and start playing games. The site shall be able to host open source games created by other contributors. A discord community can be found here https://discord.gg/4bAcxfAP86
 
 # Why PlaThyme
 Remote working made many of us start playing online games with our collegues or friends. We observed for different games we use different sites. We wanted to create a single site that can host multiple multiplayer games. So we are developing a Website that makes it easy for other developers to contribute and easily integrate their games into this project.
