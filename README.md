@@ -53,4 +53,4 @@ A version of draw the word where players alternately draw, and guess the content
 A word game where teams of players try to pass secret message codes while the other team listens.
 
 ## __License__
-This work is made available under the "[MIT License](https://github.com/PlaThyme/PlaThyme/blob/main/LICENSE) License". Please see the file LICENSE in this distribution for license terms.
+This work is made available under the "[MIT License](https://github.com/PlaThyme/PlaThyme/blob/main/LICENSE)". Please see the file LICENSE in this distribution for license terms.
