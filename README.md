@@ -51,3 +51,6 @@ A version of draw the word where players alternately draw, and guess the content
 
 ## __Enigma Breaker__
 A word game where teams of players try to pass secret message codes while the other team listens.
+
+## __Liscence__
+This work is made available under the " License". Please see the file LICENSE in this distribution for license terms.
