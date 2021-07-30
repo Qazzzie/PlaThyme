@@ -54,3 +54,9 @@ A word game where teams of players try to pass secret message codes while the ot
 
 ## __License__
 This work is made available under the "[MIT License](https://github.com/PlaThyme/PlaThyme/blob/main/LICENSE)". Please see the file LICENSE in this distribution for license terms.
+
+## __Assets for card games under LGPL by Chris Aguilar__
+Vectorized Playing Cards 3.2
+https://totalnonsense.com/open-source-vector-playing-cards/
+Copyright 2011,2021 – Chris Aguilar – conjurenation @gmail.com
+Licensed under: LGPL 3.0 - https://www.gnu.org/licenses/lgpl-3.0.html
